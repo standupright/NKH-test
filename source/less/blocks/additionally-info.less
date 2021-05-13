@@ -1,0 +1,161 @@
+.additionally-info__title {
+  display: block;
+  margin-bottom: 14px;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 16px;
+    left: 165px;
+    height: 2px;
+    width: 100vw;
+    background-color: @basic-green;
+  }
+}
+
+.additionally-info__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.additionally-info__item {
+  margin-top: 25px;
+  margin-left: 46px;
+}
+
+.additionally-info__inner {
+  margin-top: 21px;
+  text-align: center;
+}
+
+.additionally-info__button {
+  margin-top: 41px;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: @white;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  padding: 7px 0;
+  outline: none;
+  border: 0;
+  background-color: @basic-green;
+
+  &:hover,
+  &:focus {
+    background-color: @basic-green-additional;
+  }
+
+  &:active {
+    color: @white-opacity;
+  }
+}
+
+.additionally-info__required-fields {
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  margin: 0;
+  margin-top: 14px;
+}
+
+@media (min-width: @tablet-width) {
+  .additionally-info__title {
+    margin-bottom: 20px;
+    font-size: 36px;
+    line-height: 36px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 23px;
+      right: 700px;
+      height: 2px;
+      width: 100vw;
+      background-color: @basic-green;
+    }
+
+    &::after {
+      top: 23px;
+      left: 252px;
+      height: 2px;
+      width: 100vw;
+      background-color: @basic-green;
+    }
+  }
+
+  .additionally-info__list {
+    display: grid;
+    grid-template-columns: 344px 324px;
+  }
+
+  .additionally-info__item {
+    margin-top: 42px;
+    margin-left: 45px;
+  }
+
+  .additionally-info__button {
+    width: 282px;
+    padding: 13px 0;
+    font-size: 20px;
+    line-height: 26px;
+    margin-top: 0;
+  }
+
+  .additionally-info__inner {
+    display: flex;
+    align-items: center;
+    margin-top: 59px;
+  }
+
+  .additionally-info__required-fields {
+    font-size: 16px;
+    line-height: 16px;
+    margin-left: 61px;
+    margin-top: 15px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .additionally-info__title {
+    font-size: 36px;
+    line-height: 36px;
+
+    &::before {
+      right: 1260px;
+      width: 100vw;
+    }
+
+    &::after {
+      left: 252px;
+      width: 100vw;
+    }
+  }
+
+
+  .additionally-info__list {
+    display: grid;
+    grid-template-columns: 325px 325px 325px 325px;
+  }
+
+  .additionally-info__button {
+    width: 568px;
+  }
+
+  .additionally-info__required-fields {
+    margin-left: 81px;
+  }
+}
