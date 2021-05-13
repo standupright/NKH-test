@@ -1,0 +1,57 @@
+.nav {
+  margin-top: @big-offset;
+}
+
+.nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__link {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: uppercase;
+  transition: 0.3s;
+  position: relative;
+  color: @white;
+
+  &:hover,
+  &:focus {
+    opacity: 0.3;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    bottom: -10px;
+    left: 0;
+    background-color: @white;
+  }
+
+  &--current {
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 2px;
+      bottom: -10px;
+      left: 0;
+      background-color: @white;
+    }
+  }
+}

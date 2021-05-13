@@ -1,0 +1,25 @@
+.cinema-float {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  width: 700px;
+  overflow: auto;
+}
+
+.cinema-float__item {
+  display: inline;
+  float: left;
+  vertical-align: top;
+  border: 2px solid @black;
+  margin-right: @global-offset;
+  margin-bottom: @global-offset;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:nth-child(4n) {
+    margin-right: 0;
+  }
+}

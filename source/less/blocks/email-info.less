@@ -1,0 +1,39 @@
+.email-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.email-info__title {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  margin: 0;
+}
+
+.email-info__email {
+  margin-top: @global-offset;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: @white;
+  position: relative;
+
+  &:hover,
+  &:focus {
+    opacity: 0.3;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 24px;
+    height: 24px;
+    top: 0;
+    left: -35px;
+    background-image: url("../img/icon-email.svg");
+  }
+}

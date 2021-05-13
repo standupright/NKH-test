@@ -1,0 +1,42 @@
+.diveloper-table {
+  margin: 0 auto;
+  width: 800px;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid @black;
+}
+
+.diveloper-table__header,
+.diveloper-table__data-wrapper {
+  display: flex;
+}
+
+.diveloper-table__data-header {
+  width: 200px;
+  border-right: 1px solid @black;
+  padding: @global-offset;
+  background-color: @yellow;
+
+  &:last-of-type {
+    border-right: 0;
+  }
+}
+
+.diveloper-table__data {
+  width: 200px;
+  padding: @global-offset;
+  border-right: 1px solid @black;
+  border-top: 1px solid @black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:last-of-type {
+    border-right: 0;
+  }
+}

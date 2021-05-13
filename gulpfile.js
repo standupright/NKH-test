@@ -22,7 +22,7 @@ const styles = () => {
     .pipe(postcss([
       autoprefixer(),
       csso()
-    ]))    
+    ]))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("source/css"))
     .pipe(rename("style.min.css"))
@@ -36,7 +36,9 @@ exports.styles = styles;
 
 const html = () => {
   return gulp.src("source/*.html")
-    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(htmlmin({
+      collapseWhitespace: true
+    }))
     .pipe(gulp.dest("build"));
 }
 
@@ -56,8 +58,12 @@ exports.scripts = scripts;
 const images = () => {
   return gulp.src("source/img/**/*.{jpg,png,svg}")
     .pipe(imagemin([
-      imagemin.optipng({ optimizationLevel: 3 }),
-      imagemin.mozjpeg({ progressive: true }),
+      imagemin.optipng({
+        optimizationLevel: 3
+      }),
+      imagemin.mozjpeg({
+        progressive: true
+      }),
       imagemin.svgo()
     ]))
     .pipe(gulp.dest("build/img"));
@@ -69,7 +75,9 @@ exports.images = images;
 
 const createWebp = () => {
   return gulp.src("source/img/*.{jpg,png}")
-    .pipe(webp({ quality: 75 }))
+    .pipe(webp({
+      quality: 75
+    }))
     .pipe(gulp.dest("build/img"));
 }
 
@@ -78,9 +86,8 @@ exports.createWebp = createWebp;
 // Copy убрано копирование неоптимизрованных изображений исходя из критерия Б25- "source/img/**/*.{jpg,png,svg,webp}"
 const copy = () => {
   return gulp.src([
-    "source/fonts/*.{woff2,woff}"
-  ],
-    {
+      "source/fonts/*.{woff2,woff}"
+    ], {
       base: "source"
     })
     .pipe(gulp.dest("build"));

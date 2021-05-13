@@ -1,0 +1,45 @@
+.cinema-list {
+  width: 700px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: flex-end;
+
+  &--change-direction {
+    height: 560px;
+    width: 900px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &--change-direction-to-end {
+    width: 700px;
+    justify-content: flex-end;
+  }
+}
+
+.cinema-list__item {
+  border: 2px solid @black;
+  margin-bottom: @global-offset;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &--change-direction-self {
+    align-self: flex-end;
+  }
+
+  &--right-offset {
+    margin-right: @global-offset;
+  }
+
+  &--right-offset:nth-child(4n) {
+    margin-right: 0;
+  }
+}

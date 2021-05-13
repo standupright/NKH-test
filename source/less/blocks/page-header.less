@@ -1,4 +1,23 @@
 .page-header {
-    .container(desktop);
+  .container(desktop);
+  padding: @global-offset 0;
 }
 
+.page-header__title,
+.page-header__text-union {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+}
+
+.page-header__inner-preview {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  position: relative;
+  border-bottom: 2px solid @white;
+}
